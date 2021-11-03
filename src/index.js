@@ -1,9 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import "./index.css";
 
 export default function Booklist() {
   return (
-    <section>
+    <section className="booklist">
+      <Book />
       <Book />
       <Book />
       <Book />
@@ -16,7 +18,7 @@ export default function Booklist() {
 
 const Book = () => {
   return (
-    <article>
+    <article className="book">
       <Image />
       <Title />
       <Author />
