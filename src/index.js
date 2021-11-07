@@ -2,25 +2,32 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 
-export default function Booklist() {
-  return (
-    <section className="booklist">
-      <Book />
-    </section>
-  );
+const books = [
+  {
+    author: "Amelia Hepworth",
+    title: "I Love You to the Moon and Back",
+    img: "https://m.media-amazon.com/images/I/81eB+7+CkUL._AC_UY218_.jpg",
+  },
+  {
+    author: "Shannon Olsen",
+    title: "Our Class is a Family",
+    img: "https://m.media-amazon.com/images/I/71aLultW5EL._AC_UY218_.jpg",
+  },
+];
+
+const names = ["john", "peter", "susan"];
+
+function Booklist() {
+  return <section className="booklist">{names}</section>;
 }
-const author = "Amelia Hepworth";
-const Book = () => {
-  const title = "I Love You to the Moon and Back";
+
+const Book = ({ author, title, img }) => {
+  // const { author, title, img } = props;
   return (
     <article className="book">
-      <img
-        src="https://m.media-amazon.com/images/I/81eB+7+CkUL._AC_UY218_.jpg"
-        alt="asd"
-      />
+      <img src={img} alt="asd" />
       <h1>{title}</h1>
-      <h4>{author.toUpperCase()}</h4>
-      <p></p>
+      <h4>{author}</h4>
     </article>
   );
 };
