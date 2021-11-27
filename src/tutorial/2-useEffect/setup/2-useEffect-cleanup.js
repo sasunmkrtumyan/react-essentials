@@ -1,10 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
+import useWindowWidth from "../../hooks/useWindowWidth";
 
 // cleanup function
 // second argument
 
 const UseEffectCleanup = () => {
-  return <h2>useEffect cleanup</h2>;
+  const width = useWindowWidth();
+
+  return <h2>{width}</h2>;
 };
 
 export default UseEffectCleanup;
